@@ -1,16 +1,33 @@
+import './App.css';
+import Section from 'common/Section';
+import FriendList from './FriendList/FriendList';
+import SocialProfile from './SocialProfile/SocialProfile';
+import Statistics from './Statistics/Statistics';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
+import friends from '../data/friends.json'
+import user from '../data/user.json'
+import data from '../data/data.json';
+import transactions from '../data/transactions.json'
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <main className='main-container'>
+      <Section>
+        <FriendList friends={friends} />
+      </Section>
+
+      <Section>
+        <SocialProfile user={user} />
+      </Section>
+      
+      <Section>
+        <Statistics data={data} />
+      </Section>
+      
+      <Section>
+        <TransactionHistory transactions={transactions} />
+      </Section>
+      
+    </main>
   );
 };

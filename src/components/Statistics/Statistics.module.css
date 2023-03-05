@@ -1,0 +1,15 @@
+.statList{
+    display: flex;
+    margin-top: 0px;
+    width: 100%;
+    padding-left: 0px;
+}
+
+.title{
+    display: block;
+    text-align: center;
+    background-color: rgb(167, 161, 161);
+    padding-top: 20px;
+    margin-bottom: 0px;
+    height: 50px;
+}

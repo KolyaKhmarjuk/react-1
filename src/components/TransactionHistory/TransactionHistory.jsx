@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
-
+import Section from 'common/Section'
 import s from '../TransactionHistory/TransactionHistory.module.css'
 
 const TransactionHistory = ({ transactions }) => {
   return (
-<div>
+    <Section>
     <table className={s.transactionHistory}>
               
   <thead>
@@ -24,9 +24,8 @@ const TransactionHistory = ({ transactions }) => {
         </tr>
       </tbody>
         ))}          
-      
     </table>
-</div>
+      </Section>
   )
 }
 

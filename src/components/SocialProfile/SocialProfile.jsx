@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types'
 import s from '../SocialProfile/SocialProfile.module.css'
+import Section from 'common/Section';
 
 const SocialProfile = ({ user }) => {
     const { username, tag, location, avatar, stats } = user;
     const { followers, views, likes } = stats;
     
   return (
+    <Section>
     <div className={s.profile}>
   <div className={s.description}>
     <img
@@ -32,7 +34,8 @@ const SocialProfile = ({ user }) => {
       <span className={s.quantity}>{likes}</span>
     </li>
   </ul>
-</div>
+      </div>
+      </Section>
   )
 }
 
